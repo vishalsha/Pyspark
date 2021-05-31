@@ -1,0 +1,40 @@
+
+dataList = [{'a': 1, 'aa':11}, {'b': 3}, {'c': 5}]
+
+#1.
+#list iterations, using list comprehension
+print(*[val for dic in dataList for val in dic.values()],sep='\n')
+
+print('\n')
+
+#2.
+#iterating over the dictionary with its value directly
+for dic in dataList:
+    for val in dic.values():
+        print(val)
+        
+print('\n')
+
+#3.
+#iterating over the dictionary directly
+for dict in dataList:
+    for key in dict:
+        print(dict[key])
+
+print('\n')
+
+#4.
+#iterate over the indices of range of the range of the datalist
+for i in range(len(dataList)):
+    for key in dataList[i]:
+        print(dataList[i][key])
+    
+print('\n')    
+   
+#5.
+#Use while loop with an index to iterate
+i = 0
+while(i<len(dataList)):
+    for key in dataList[i]:
+        print(dataList[i][key])
+    i = i+1
